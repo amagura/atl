@@ -1,0 +1,12 @@
+# vim: set ft=sh:
+
+# TODO Add a way to inject the user's name into the user tools variable
+__utl_ver__="$USER_TOOLS_INFO[VERSION]"
+USER_TOOLS_INFO[VERSION]="0.0.00"
+
+if [[ $__utl_ver__ != $USER_TOOLS_INFO[VERSION] ]]; then
+  USER_TOOLS_INFO[OLD_VERSION]="$__utl_ver__"
+fi
+
+USER_TOOLS_INFO[STARTDIR]="<INSTALL DIRECTORY>"
+USER_TOOLS_INFO[TMPDIR]="<SYSTEM TMPDIR>"
