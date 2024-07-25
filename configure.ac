@@ -15,15 +15,15 @@ AC_PROG_AWK
 AC_PROG_INSTALL
 AC_PROG_CPP
 AC_PROG_MKDIR_P
-AC_CHECK_PROGS([CYTHON], [cython], AC_MSG_ERROR([Cython is a make dependency for User Tools]))
+AC_CHECK_PROGS([CYTHON], [cython cython3], AC_MSG_ERROR([Cython is a make dependency for User Tools]))
 AC_CHECK_PROGS([BATS], [bats], AC_MSG_WARN([Bats is necessary for testing User Tools]))
-AC_CHECK_PROGS([GPP], [gpp], AC_MSG_NOTICE([GPP is needed for something - I don't remember :|]))
+AC_CHECK_PROGS([GPP], [gpp], AC_MSG_NOTICE([GPP is needed for something - I don't remember]))
 
 #AC_CHECK_LIB([xml2], [xmlXPathEvalExpression])
 
 PKG_PROG_PKG_CONFIG
 #[export PKG_CONFIG_PATH="/apps/python_3.5/lib/pkgconfig:$PKG_CONFIG_PATH"]
-PKG_CHECK_MODULES([XML2], [libxml2],, AC_MSG_ERROR([libxml2 is a make dependency for User Tools]))
+PKG_CHECK_MODULES([XML2], [libxml-2.0],, AC_MSG_ERROR([libxml2 is a make dependency for User Tools]))
 PKG_CHECK_MODULES([PYTHON], [python3], [python3],,)
 
 # Checks for libraries.
