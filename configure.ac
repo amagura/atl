@@ -16,6 +16,9 @@ AC_PROG_INSTALL
 AC_PROG_CPP
 AC_PROG_MKDIR_P
 AC_CHECK_PROGS([CYTHON], [cython], AC_MSG_ERROR([Cython is a make dependency for User Tools]))
+AC_CHECK_PROGS([BATS], [bats], AC_MSG_WARN([Bats is necessary for testing User Tools]))
+AC_CHECK_PROGS([GPP], [gpp], AC_MSG_NOTICE([GPP is needed for something - I don't remember :|]))
+
 #AC_CHECK_LIB([xml2], [xmlXPathEvalExpression])
 
 PKG_PROG_PKG_CONFIG
